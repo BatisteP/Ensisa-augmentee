@@ -8,6 +8,7 @@ public class Teacher : User
 	private string forename;
 	private string mail;
 	private float room;
+	private bool inRoom;
 	
 	public Teacher(string n, string f, string m, float r)
 	{
@@ -15,6 +16,7 @@ public class Teacher : User
 		this.forename=f;
 		this.mail=m;
 		this.room=r;
+		this.inRoom=false;
 	}
 	
 	public override string getName()
@@ -47,6 +49,15 @@ public class Teacher : User
 		return true;
 	}
 	
+	public void enterRoom()
+	{
+		this.inRoom=true;
+	}
+	
+	public void leaveRoom()
+	{
+		this.inRoom=false;
+	}
 	
     // Start is called before the first frame update
     void Start()

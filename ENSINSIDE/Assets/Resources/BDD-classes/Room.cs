@@ -15,6 +15,7 @@ public class Room : MonoBehaviour
 	private int pcTot;
 	private int placesTaken;
 	private int pcTaken;
+	private int pcFailure;
 	private ArrayList reservations;
 	
 	
@@ -31,6 +32,7 @@ public class Room : MonoBehaviour
 		
 		this.placesTaken=0;
 		this.pcTaken=0;
+		this.pcFailure=0;
 	}
 	
 	public float getId()
@@ -70,6 +72,23 @@ public class Room : MonoBehaviour
 		this.reservations.Remove(res);
 	}
 	
+	public void addFailure()
+	{
+		if (this.pcFailure < this.pcTot)
+		{
+			this.pcFailure++;
+		}
+		
+	}
+	
+	public void solveFailure()
+	{
+		if (this.pcFailure >0)
+		{
+			this.pcFailure--;
+		}
+		
+	}
 	
 	public void addStudent()
 	{
@@ -110,6 +129,12 @@ public class Room : MonoBehaviour
 	{
 		return this.pcTot-this.pcTaken;
 	}
+	
+	public ArrayList getReservations()
+	{
+		return this.reservations;
+	}
+	
     // Start is called before the first frame update
     void Start()
     {
