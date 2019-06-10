@@ -13,6 +13,8 @@ public class UIHandler : MonoBehaviour
     public Button findSomeone;
     public Button room;
 
+    public Button menu;
+
     public void navStart()
     {
         if(!nav.gameObject.active)
@@ -27,6 +29,7 @@ public class UIHandler : MonoBehaviour
             findRoom.GetComponentInChildren<Text>().text = "";
             findSomeone.GetComponentInChildren<Text>().text = "";
             room.GetComponentInChildren<Text>().text = "";
+            menu.GetComponentInChildren<Text>().text = "+";
 
             StartCoroutine(startSlide(-1));
         }
@@ -58,6 +61,7 @@ public class UIHandler : MonoBehaviour
             findRoom.GetComponentInChildren<Text>().text = "Rechercher une salle";
             findSomeone.GetComponentInChildren<Text>().text = "Rechercher quelqu'un";
             room.GetComponentInChildren<Text>().text = "Salle";
+            menu.GetComponentInChildren<Text>().text = "-";
         }
     }
 }
