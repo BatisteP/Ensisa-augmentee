@@ -7,13 +7,14 @@ public class Promo : MonoBehaviour
 	private int year;
 	private string spec;
 	private ArrayList students;
-	
+	private bool ismodified;
 	
 	public Promo(int y, string s)
 	{
 		this.year=y;
 		this.spec=s;
 		this.students=new ArrayList();
+		this.ismodified=false;
 	}
 	
 	public int getYear()
@@ -41,6 +42,12 @@ public class Promo : MonoBehaviour
 	public void addStudent(Student s)
 	{
 		this.students.Add(s);
+		this.ismodified=true;
+	}
+	
+	public bool isModified()
+	{
+		return this.ismodified;
 	}
 	
     // Start is called before the first frame update

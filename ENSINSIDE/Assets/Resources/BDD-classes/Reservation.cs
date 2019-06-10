@@ -17,6 +17,8 @@ public abstract class Reservation : MonoBehaviour
 	
 	public abstract float getRoom();
 	
+	public abstract bool isModified();
+	
 	
     // Start is called before the first frame update
     void Start()

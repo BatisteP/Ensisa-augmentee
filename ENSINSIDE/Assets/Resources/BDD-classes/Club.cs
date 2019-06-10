@@ -6,12 +6,13 @@ public class Club : MonoBehaviour
 {
 	private string itsname;
 	private ArrayList students;
-	
+	private bool ismodified;
 	
 	public Club(string n)
 	{
 		this.itsname=n;
 		this.students=new ArrayList();
+		this.ismodified=false;
 	}
 	
 	public bool containStudent(Student student)
@@ -29,11 +30,18 @@ public class Club : MonoBehaviour
 	public void addStudent(Student s)
 	{
 		this.students.Add(s);
+		this.ismodified=true;
 	}
 	
 	public void removeStudent(Student s)
 	{
 		this.students.Remove(s);
+		this.ismodified=true;
+	}
+	
+	public bool isModified()
+	{
+		return this.ismodified;
 	}
 	
     // Start is called before the first frame update

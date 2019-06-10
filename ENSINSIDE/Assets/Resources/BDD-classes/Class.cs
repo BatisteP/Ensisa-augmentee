@@ -11,6 +11,7 @@ public class Class : Reservation
 	private DateTime begin;
 	private DateTime end;
 	private string description;
+	private bool ismodified;
 	
 	public Class(User u, float r, Promo p, DateTime b, DateTime e, string des)
 	{
@@ -20,6 +21,7 @@ public class Class : Reservation
 		this.begin=b;
 		this.end=e;
 		this.description=des;
+		this.ismodified=false;
 	}
 	
 	public override bool isActive(DateTime date)
@@ -60,11 +62,17 @@ public class Class : Reservation
 	public override void setUser(User u)
 	{
 		this.user=u;
+		this.ismodified=true;
 	}
 	
 	public Promo getPromo()
 	{
 		return this.promo;
+	}
+	
+	public override bool isModified()
+	{
+		return this.ismodified;
 	}
 	
     // Start is called before the first frame update

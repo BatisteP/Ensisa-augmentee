@@ -10,6 +10,7 @@ public class Activity : Reservation
 	private DateTime begin;
 	private DateTime end;
 	private string description;
+	private bool ismodified;
 	
 	public Activity(User u, float r, DateTime b, DateTime e, string des)
 	{
@@ -18,6 +19,7 @@ public class Activity : Reservation
 		this.begin=b;
 		this.end=e;
 		this.description=des;
+		this.ismodified=false;
 	}
 	
 	public override bool isActive(DateTime date)
@@ -58,6 +60,12 @@ public class Activity : Reservation
 	public override void setUser(User u)
 	{
 		this.user=u;
+		this.ismodified=true;
+	}
+	
+	public override bool isModified()
+	{
+		return this.ismodified;
 	}
 	
 	

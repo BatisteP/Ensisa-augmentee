@@ -17,6 +17,7 @@ public class Room : MonoBehaviour
 	private int pcTaken;
 	private int pcFailure;
 	private ArrayList reservations;
+	private bool ismodified;
 	
 	
 	public Room(float i,int f,string a,string t, string d, int pt, int pc)
@@ -33,6 +34,7 @@ public class Room : MonoBehaviour
 		this.placesTaken=0;
 		this.pcTaken=0;
 		this.pcFailure=0;
+		this.ismodified=false;
 	}
 	
 	public float getId()
@@ -65,11 +67,13 @@ public class Room : MonoBehaviour
 	public void addReservation(Reservation res)
 	{
 		this.reservations.Add(res);
+		this.ismodified=true;
 	}
 	
 	public void discardReservation(Reservation res)
 	{
 		this.reservations.Remove(res);
+		this.ismodified=true;
 	}
 	
 	public void addFailure()
@@ -78,6 +82,7 @@ public class Room : MonoBehaviour
 		{
 			this.pcFailure++;
 		}
+		this.ismodified=true;
 		
 	}
 	
@@ -87,27 +92,32 @@ public class Room : MonoBehaviour
 		{
 			this.pcFailure--;
 		}
+		this.ismodified=true;
 		
 	}
 	
 	public void addStudent()
 	{
 		this.placesTaken++;
+		this.ismodified=true;
 	}
 	
 	public void usePC()
 	{
 		this.pcTaken++;
+		this.ismodified=true;
 	}
 	
 	public void leaveStudent()
 	{
 		this.placesTaken--;
+		this.ismodified=true;
 	}
 	
 	public void freePC()
 	{
 		this.pcTaken--;
+		this.ismodified=true;
 	}
 	
 	public int getPlacesTot()
@@ -133,6 +143,11 @@ public class Room : MonoBehaviour
 	public ArrayList getReservations()
 	{
 		return this.reservations;
+	}
+	
+	public bool isModified()
+	{
+		return this.ismodified;
 	}
 	
     // Start is called before the first frame update

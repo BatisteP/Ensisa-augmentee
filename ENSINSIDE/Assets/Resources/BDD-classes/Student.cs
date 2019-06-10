@@ -8,15 +8,19 @@ public class Student : User
 	private string forename;
 	private string mail;
 	private ArrayList clubs;
+	private string password;
 	private Promo promo;
+	private bool ismodified;
 	
-	public Student(string n, string f, string m, Promo p)
+	public Student(string n, string f, string pa, string m, Promo p)
 	{
 		this.firstname=n;
 		this.forename=f;
+		this.password=pa;
 		this.mail=m;
 		this.clubs= new ArrayList();
 		this.promo=p;
+		this.ismodified=false;
 	}
 	
 	public override string getName()
@@ -42,6 +46,7 @@ public class Student : User
 	public void addClub(Club c)
 	{
 		this.clubs.Add(c);
+		this.ismodified=true;
 	}
 	
 	public bool canRes()
@@ -49,6 +54,10 @@ public class Student : User
 		return true;
 	}
 	
+	public bool isModified()
+	{
+		return this.ismodified;
+	}
 	
     // Start is called before the first frame update
     void Start()
