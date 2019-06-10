@@ -228,11 +228,11 @@ RectTransform:
   - {fileID: 1954008073}
   - {fileID: 872926623}
   m_Father: {fileID: 2096050961}
-  m_RootOrder: 4
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0000011921, y: 30}
+  m_AnchoredPosition: {x: 0, y: -235.00002}
   m_SizeDelta: {x: 600, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &15507113
@@ -819,11 +819,11 @@ RectTransform:
   - {fileID: 493911632}
   - {fileID: 478715711}
   m_Father: {fileID: 2096050961}
-  m_RootOrder: 7
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1, y: -221}
+  m_AnchoredPosition: {x: 1, y: 140.99994}
   m_SizeDelta: {x: 600, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &346766809
@@ -2139,6 +2139,8 @@ GameObject:
   - component: {fileID: 707276822}
   - component: {fileID: 707276825}
   - component: {fileID: 707276826}
+  - component: {fileID: 707276827}
+  - component: {fileID: 707276828}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2236,6 +2238,43 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0713cd01a28da324eae423df751fd5a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &707276827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 707276821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6e6e4814892dbc44b24fc405a8ec9cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  status: {fileID: 1472435699}
+  promo: {fileID: 15507113}
+  td: {fileID: 1258023090}
+  tp: {fileID: 1825073060}
+--- !u!114 &707276828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 707276821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9998af92e4c4fcc46a7b159b4e8550da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  firstname: {fileID: 1839535645}
+  lastname: {fileID: 476967959}
+  email: {fileID: 346766809}
+  password: {fileID: 1211042630}
+  status: {fileID: 1472435699}
+  promo: {fileID: 15507113}
+  td: {fileID: 1258023090}
+  tp: {fileID: 1825073060}
+  nextScene: MenuScene
 --- !u!1 &727895826
 GameObject:
   m_ObjectHideFlags: 0
@@ -2959,7 +2998,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -503.6}
+  m_AnchoredPosition: {x: 0, y: -518}
   m_SizeDelta: {x: 320, y: 110}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1089695756
@@ -3005,9 +3044,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 707276826}
-        m_MethodName: changeScene
-        m_Mode: 5
+      - m_Target: {fileID: 707276828}
+        m_MethodName: saveInfo
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3455,11 +3494,11 @@ RectTransform:
   - {fileID: 1897952183}
   - {fileID: 1452353701}
   m_Father: {fileID: 2096050961}
-  m_RootOrder: 8
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0000011921, y: -344}
+  m_AnchoredPosition: {x: 0, y: 18}
   m_SizeDelta: {x: 600, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1211042630
@@ -3600,11 +3639,11 @@ RectTransform:
   - {fileID: 1365150747}
   - {fileID: 974005801}
   m_Father: {fileID: 2096050961}
-  m_RootOrder: 5
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -174, y: -91}
+  m_AnchoredPosition: {x: -174, y: -356}
   m_SizeDelta: {x: 250, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1258023090
@@ -4398,7 +4437,7 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 5
     m_MaxSize: 50
-    m_Alignment: 3
+    m_Alignment: 6
     m_AlignByGeometry: 0
     m_RichText: 0
     m_HorizontalOverflow: 1
@@ -4605,11 +4644,11 @@ RectTransform:
   - {fileID: 727895827}
   - {fileID: 546877701}
   m_Father: {fileID: 2096050961}
-  m_RootOrder: 3
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1, y: 153}
+  m_AnchoredPosition: {x: 1, y: -112.000015}
   m_SizeDelta: {x: 600, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1472435699
@@ -4666,7 +4705,18 @@ MonoBehaviour:
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 707276827}
+        m_MethodName: selection
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Dropdown+DropdownEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
   m_AlphaFadeSpeed: 0.15
@@ -4930,11 +4980,11 @@ RectTransform:
   - {fileID: 1529387197}
   - {fileID: 556199906}
   m_Father: {fileID: 2096050961}
-  m_RootOrder: 6
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 176, y: -90.99999}
+  m_AnchoredPosition: {x: 176.00002, y: -356}
   m_SizeDelta: {x: 250, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1825073060
@@ -6261,12 +6311,12 @@ RectTransform:
   - {fileID: 1142402069}
   - {fileID: 1839535644}
   - {fileID: 476967958}
+  - {fileID: 346766808}
+  - {fileID: 1211042629}
   - {fileID: 1472435698}
   - {fileID: 15507112}
   - {fileID: 1258023089}
   - {fileID: 1825073059}
-  - {fileID: 346766808}
-  - {fileID: 1211042629}
   - {fileID: 1089695755}
   - {fileID: 2021568129}
   m_Father: {fileID: 707276824}
