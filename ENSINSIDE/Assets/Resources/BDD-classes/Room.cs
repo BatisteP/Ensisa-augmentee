@@ -42,7 +42,7 @@ public class Room : MonoBehaviour
 		return this.id;
 	}
 	
-	public float getFloor()
+	public int getFloor()
 	{
 		return this.floor;
 	}
