@@ -82,10 +82,10 @@ public class Student : User
 		{
 			if (club==c)
 			{
-				return true
+				return true;
 			}
 		}
-		return false
+		return false;
 	}
 	
 	
