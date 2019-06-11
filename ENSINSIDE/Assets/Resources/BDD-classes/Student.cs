@@ -76,7 +76,20 @@ public class Student : User
 		return this.password;
 	}
 	
-    // Start is called before the first frame update
+    public bool isInClub(Club c)
+	{
+		foreach(Club club in this.clubs)
+		{
+			if (club==c)
+			{
+				return true
+			}
+		}
+		return false
+	}
+	
+	
+	// Start is called before the first frame update
     void Start()
     {
         
