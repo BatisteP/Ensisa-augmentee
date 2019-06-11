@@ -77,7 +77,7 @@ public class Teacher : User
 		return this.inRoom;
 	}
 	
-	public bool isModified()
+	public override bool isModified()
 	{
 		return this.ismodified;
 	}

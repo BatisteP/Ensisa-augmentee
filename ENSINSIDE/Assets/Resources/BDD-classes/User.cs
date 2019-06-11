@@ -9,9 +9,10 @@ public abstract class User : MonoBehaviour
 	public abstract string getName();
 	public abstract string getForename();
 	public abstract string getMail();
-	public abstract void setPassword();
-	public abstract void setMail();
+	public abstract void setPassword(string p);
+	public abstract void setMail(string m);
 	public abstract string getPassword();
+	public abstract bool isModified();
 	
     // Start is called before the first frame update
     void Start()
