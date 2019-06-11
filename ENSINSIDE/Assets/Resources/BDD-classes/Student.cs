@@ -43,6 +43,12 @@ public class Student : User
 		return this.mail;
 	}
 	
+	public override void setMail(string m)
+	{
+		this.mail=m;
+		this.ismodified=true;
+	}
+	
 	public void addClub(Club c)
 	{
 		this.clubs.Add(c);
@@ -54,9 +60,20 @@ public class Student : User
 		return true;
 	}
 	
-	public bool isModified()
+	public override bool isModified()
 	{
 		return this.ismodified;
+	}
+	
+	public override void setPassword(string p)
+	{
+		this.password=p;
+		this.ismodified=true;
+	}
+	
+	public override string getPassword()
+	{
+		return this.password;
 	}
 	
     // Start is called before the first frame update
