@@ -13,6 +13,7 @@ public abstract class User : MonoBehaviour
 	public abstract void setMail(string m);
 	public abstract string getPassword();
 	public abstract bool isModified();
+	public abstract bool canRes();
 	
     // Start is called before the first frame update
     void Start()

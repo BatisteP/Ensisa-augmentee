@@ -55,9 +55,9 @@ public class Student : User
 		this.ismodified=true;
 	}
 	
-	public bool canRes()
+	public override bool canRes()
 	{
-		return true;
+		return false;
 	}
 	
 	public override bool isModified()

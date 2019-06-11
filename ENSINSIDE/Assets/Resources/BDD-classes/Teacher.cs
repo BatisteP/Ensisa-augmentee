@@ -55,7 +55,7 @@ public class Teacher : User
 		this.ismodified=true;
 	}
 	
-	public bool canRes()
+	public override bool canRes()
 	{
 		return true;
 	}
