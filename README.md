@@ -25,10 +25,10 @@ L'emploi du temps de chaque salle du bâiment Lumière de l'ENSISA est récupér
 
 ## Développeurs
 
-* Benjamin Chapouli (chef de projet) ;
+* Benjamin Chapoulie (chef de projet) ;
 * Büşra Dağlı ;
 * Manon Heyser ;
 * Pierre Mantegazza ;
-* Lisa Mouglis ;
+* Lisa Moulis ;
 * Batiste Pretesac ;
 * Lucas Schloesslin.
