@@ -17,7 +17,7 @@ Les axes principaux de réflexions sont les suivant :
   - Gestion de différents profils 
 
 ### Axes secondaires
-Les axes moins prioritaires auquels nous avons pensé :
+Les axes moins prioritaires auxquels nous avons pensé :
   - Check in/check out des professeurs dans leur bureau
   - Recherche de salle
   - Jeu de prise en main de l'application
@@ -33,22 +33,22 @@ Le prototype a été développé sur Unity en C# avec la technologie Vuforia (po
 L'utilisateur s'inscrit à la première utilisation, puis se connecte.
 
 ### Menu
-Une fois connecté, il est redirigé vers l'écran principal. Ce dernier comporte une caméra permettant de détecter le panonceau des salles. Lorsqu'un panonceau est détecté, il est décodé. Il est alors affiché le nom de la salle ansi que deux boutons virtuels en réalité augmentée : un bouton "emploi du temps" et un autre "informations". Ils permettent, par un simple passage du doigt devant le bouton, d'affichier l'emploi du temps de la salle en question afin de savoir si elle est occupée ou non et également toutes les informations utiles de la salle.
+Une fois connecté, il est redirigé vers l'écran principal. Ce dernier comporte une caméra permettant de détecter le panonceau des salles. Lorsqu'un panonceau est détecté, il est décodé. Il est alors affiché le nom de la salle ainsi que deux boutons virtuels en réalité augmentée : un bouton "emploi du temps" et un autre "informations". Ils permettent, par un simple passage du doigt devant le bouton, d'afficher l'emploi du temps de la salle en question afin de savoir si elle est occupée ou non et également toutes les informations utiles de la salle.
 
 ### Salle
 Les informations de la salle comprennent son type (exemple : salle de TP), son numéro, son étage, le nombre de places et le nombre d'ordinateurs. L'emploi du temps comprend les informations pour la semaine courante (avec les informations des cours à chaque horaire), et il est possible de voir les semaines précédentes et suivantes.
 
 
 
-L'emploi du temps de chaque salle du bâiment Lumière de l'ENSISA est récupérer d'une basse de données en ligne (c.f. Iariss). Les informations ainsi récupérées, nous remplissons notre base de données locale. A chaque fois que l'utilisateur souhaite accéder à une information, le programme cherche la donnée correspondante dans la base de données locale.
+L'emploi du temps de chaque salle du bâtiment Lumière de l'ENSISA est récupérer d'une basse de données en ligne (c.f. Iariss). Les informations ainsi récupérées, nous remplissons notre base de données locale. A chaque fois que l'utilisateur souhaite accéder à une information, le programme cherche la donnée correspondante dans la base de données locale.
 
 ## Possibilités d'améliorations
 
-Le temps alloué à la réalisation du projet ayant été relativement court au vue de nos connaissances sur le sujet, il n'a donc pas été possible d'implémenter toutes les idées qui ont muri dans nos têtes lors du brainstorming de départ. Il reste donc la possibilité d'amélorier ce projet à l'aide de nos idées encore non réalisées à l'heure du jour.
+Le temps alloué à la réalisation du projet ayant été relativement court aux vues de nos connaissances sur le sujet, il n'a donc pas été possible d'implémenter toutes les idées qui ont muri dans nos têtes lors du brainstorming de départ. Il reste donc la possibilité d'améliorier ce projet à l'aide de nos idées encore non réalisées à l'heure du jour.
 
 ## Technologies employées
 
-Pour la réalisation de ce projet nous avons donc choisi d'utiliser Unity et son SDK Vuforia. Pourquoi cette technologie et pas une autre ? Nous étions d'abord partie sur une autre technique de développement qui n'était autre qu'Android Studio et son framework ARcore. Nous avons très vite abandonné cette idée pour une question de compatibilité. En effet ARcore n'est compatible qu'à partir d'une version 7 d'android, ce qui représente envrion 10% des utilisateurs android : public beaucoup trop maigre à notre goût. L'utilisation de Unity et Vuforia nous permet alors d'être compatible avec android de la version 5 à la version actuelle, ce qui couvre 97% des utilisateurs android. Certe la technologie est alors moins développer que l'est actuellement le framework ARcore mais la question de compatibilité nous a paru plus importante à notre goût que celle de la performance.
+Pour la réalisation de ce projet nous avons donc choisi d'utiliser Unity et son SDK Vuforia. Pourquoi cette technologie et pas une autre ? Nous étions d'abord parties sur une autre technique de développement qui n'était autre qu'Android Studio et son framework ARcore. Nous avons très vite abandonné cette idée pour une question de compatibilité. En effet ARcore n'est compatible qu'à partir d'une version 7 d'android, ce qui représente environ 10% des utilisateurs android : public beaucoup trop maigre à notre goût. L'utilisation de Unity et Vuforia nous permet alors d'être compatible avec android de la version 5 à la version actuelle, ce qui couvre 97% des utilisateurs android. Certe la technologie est alors moins développer que l'est actuellement le framework ARcore mais la question de compatibilité nous a paru plus importante à notre goût que celle de la performance.
 
 ## Développeurs
 
