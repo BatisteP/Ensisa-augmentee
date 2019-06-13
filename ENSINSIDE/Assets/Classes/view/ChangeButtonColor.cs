@@ -6,18 +6,18 @@ using UnityEngine.UI;
 using System;
 
 public class ChangeButtonColor : MonoBehaviour
-{
-
-    //Make sure to attach these Buttons in the Inspector
+{   
     public Button btnColor;
 
     void Start()
     {
+        Debug.Log("hey");
         btnColor.onClick.AddListener(TaskOnClick);
     }
 
     void TaskOnClick()
     {
+        Debug.Log("clic");
         if (String.Equals(btnColor.GetComponentInChildren<Text>().text, "ON"))
         {
             ColorBlock cb = btnColor.colors;

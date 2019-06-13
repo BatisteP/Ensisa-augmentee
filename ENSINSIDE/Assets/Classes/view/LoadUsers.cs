@@ -8,7 +8,7 @@ public class LoadUsers : MonoBehaviour
     public Dropdown users;
 
     void Start() {
-        List<string> usersName = GUser.UsersName();
+        List<string> usersName = GUser.usersName;
         usersName.Remove(PlayerPrefs.GetString("firstname") + " " + PlayerPrefs.GetString("lastname"));
 
         users.AddOptions(usersName);

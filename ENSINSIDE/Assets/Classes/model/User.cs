@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class User : MonoBehaviour
+public abstract class User
 {
     private int id;
     private string firstname;

@@ -1,12 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Mono.Data.Sqlite;
+using System.Data;
+using System.IO;
+using UnityEditor;
+using System;
 
-public class GRoom : MonoBehaviour
+public class GRoom
 {
-    void Awake() {
-        DontDestroyOnLoad(this);
-    }
 
     private static List<Room> rooms = new List<Room>();
     private static int lastId = -1;
@@ -14,6 +16,22 @@ public class GRoom : MonoBehaviour
 
     public static List<Room> Rromos() {
         return rooms;
+    }
+
+
+    public static void RetrieveRooms() {
+        IDataReader reader = DBCommands.RetrieveRooms();
+
+        while (reader.Read()) {
+            int roomId = Int32.Parse(reader[0].ToString());
+            int floor = Int32.Parse(reader[1].ToString());
+            string name = reader[2].ToString();
+            string type = reader[3].ToString();
+            int nPlaces = Int32.Parse(reader[4].ToString());
+            int nPCs = Int32.Parse(reader[5].ToString());
+
+            CreateRoom(roomId, floor, name,type, nPlaces, nPCs);
+        }
     }
 
 
@@ -43,7 +61,7 @@ public class GRoom : MonoBehaviour
 
         foreach (Room r in rooms) {
             if (string.Equals(r.Appelation, appelation)) {
-                room = r;
+                return r;
             }
         }
 
@@ -55,7 +73,7 @@ public class GRoom : MonoBehaviour
 
         foreach (Room r in rooms) {
             if (r.RoomId == roomId && r.Floor == floor) {
-                room = r;
+                return r;
             }
         }
 

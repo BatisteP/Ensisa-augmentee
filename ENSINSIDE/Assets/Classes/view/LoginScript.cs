@@ -6,29 +6,55 @@ using System;
 
 public class LoginScript : MonoBehaviour
 {
+
     public InputField mailAddressIT;
     public InputField passwordIT;
 
     public void Login() {
         if(!String.IsNullOrEmpty(mailAddressIT.text) && !String.IsNullOrEmpty(passwordIT.text)) {
-            GApp.SetPrefUser("Manon", "Heyser", mailAddressIT.text, passwordIT.text, "student", "IR", "TD2", "TP2", "2019-02-14"); // as IARISS didn't give us the schedule data for the current month, but for a more "full" month
+            GUser.GetUserByConnexion(mailAddressIT.text, passwordIT.text);
+            User user = GUser.user;
+            
+            if (user != null) {
+                Debug.Log("not null");
+                if (user.IsStudent()) {
+                    GApp.SetPrefUser(user.Firstname, user.Lastname, mailAddressIT.text, passwordIT.text, "Elève", ((Student)user).Promo.Specialty, "TD1", "TP1", "2019-02-14"); // as IARISS didn't give us the schedule data for the current month, but for a more "full" month
+                }
+                else {
+                    GApp.SetPrefUser(user.Firstname, user.Lastname, mailAddressIT.text, passwordIT.text, "Prof.", "", "", "", "2019-02-14"); // as IARISS didn't give us the schedule data for the current month, but for a more "full" month
+                }
 
-           
+                GApp.ChangeScene("DetectSalle");
+            }
 
-            GApp.ChangeScene("DetectSalle");
+            else Debug.Log("user Null");
         }
     }
 
     public void AlreadyLoggedIn() {
-
-        /* Chargement base de données :
-        Chargement de l'emploi du temps pour la semaine courante.
-        Récupération des informations de l'utilisateur se connecte.
-        */
-
-
+        
         if (!String.IsNullOrEmpty(PlayerPrefs.GetString("email")) && !String.IsNullOrEmpty(PlayerPrefs.GetString("password"))) {
-            GApp.ChangeScene("DetectSalle"); 
+            GUser.GetUserByConnexion(PlayerPrefs.GetString("email"), PlayerPrefs.GetString("password"));
+            User user = GUser.user;
+
+            if (user != null) {
+                Debug.Log("not null");
+
+                
+                if (user.IsStudent()) {
+                    string spe = ((Student)user).Promo.Specialty;
+                    GApp.SetPrefUser(user.Firstname, user.Lastname, user.Email, user.Password, "Elève", spe, "TD1", "TP1", "2019-02-14"); // as IARISS didn't give us the schedule data for the current month, but for a more "full" month
+                }
+                else {
+                    GApp.SetPrefUser(user.Firstname, user.Lastname, user.Email, user.Password, "Prof.", "", "", "", "2019-02-14"); // as IARISS didn't give us the schedule data for the current month, but for a more "full" month
+                }
+
+                GApp.ChangeScene("DetectSalle");
+            }
+            else {
+                Debug.Log("user Null");
+                PlayerPrefs.DeleteAll();
+            }
         }
         else {
             GApp.ChangeScene("ConnexionScene");  

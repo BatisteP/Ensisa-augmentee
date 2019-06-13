@@ -21,6 +21,6 @@ public class GApp : MonoBehaviour
         PlayerPrefs.SetString("promo", promo);
         PlayerPrefs.SetString("td", td);
         PlayerPrefs.SetString("tp", tp);
-        PlayerPrefs.SetString("today", date);
+        PlayerPrefs.SetString("today", "2019-02-11"); // date
     }
 }

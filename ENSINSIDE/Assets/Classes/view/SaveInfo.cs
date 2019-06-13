@@ -24,14 +24,16 @@ public class SaveInfo : MonoBehaviour
             
             // Prof
             if (String.Equals(status.captionText.text, "Prof.")) {
-                currentUser = GUser.CreateTeacher(firstname.text, lastname.text, email.text, password.text);
-                GApp.SetPrefUser(firstname.text, lastname.text, email.text, password.text, "Prof.", "", "", "", "2019-02-14");
+                int id = DBCommands.InsertTeacher(lastname.text, firstname.text, email.text, password.text);
+                currentUser = GUser.CreateTeacher(id, firstname.text, lastname.text, email.text, password.text);
+                GApp.SetPrefUser(firstname.text, lastname.text, email.text, password.text, "Prof.", "", "", "", "2019-02-11");
             }
             // Student
             else {
-                Debug.Log(status.captionText.text);
-                currentUser = GUser.CreateStudent(firstname.text, lastname.text, email.text, password.text, null);
-                GApp.SetPrefUser(firstname.text, lastname.text, email.text, password.text, "Elève", promo.captionText.text, td.captionText.text, tp.captionText.text, "2019-02-14");
+                Promo p = GPromo.GetPromo(1, promo.captionText.text);
+                int id = DBCommands.InsertStudent(firstname.text, lastname.text, p.Id, email.text, password.text);
+                currentUser = GUser.CreateStudent(id, firstname.text, lastname.text, email.text, password.text, p);
+                GApp.SetPrefUser(firstname.text, lastname.text, email.text, password.text, "Elève", p.Specialty, td.captionText.text, tp.captionText.text, "2019-02-11");
             }
 
             GApp.ChangeScene(nextScene);
@@ -41,17 +43,17 @@ public class SaveInfo : MonoBehaviour
 
     public void UpdateUser() {
         if (!String.IsNullOrEmpty(firstname.text) && !String.IsNullOrEmpty(lastname.text) && !String.IsNullOrEmpty(email.text) && !String.IsNullOrEmpty(password.text)) {
-            User currentUser = GUser.GetUserByConnexion(firstname.text, lastname.text);
-            if (currentUser == null) Debug.Log("\tnull");
+            User currentUser = GUser.GetUserByConnexion(email.text, password.text);
+
             // Prof
             if (String.Equals(status.captionText.text, "Prof.")) {
                 GUser.UpdateTeacher((Teacher) currentUser, firstname.text, lastname.text, email.text, password.text);
-                GApp.SetPrefUser(firstname.text, lastname.text, email.text, password.text, "Prof.", "", "", "", "2019-02-14");
+                GApp.SetPrefUser(firstname.text, lastname.text, email.text, password.text, "Prof.", "", "", "", "2019-02-11");
             }
             // Student
             else {
-                GUser.UpdateStudent((Student) currentUser, firstname.text, lastname.text, email.text, password.text, null);
-                GApp.SetPrefUser(firstname.text, lastname.text, email.text, password.text, "Elève", promo.captionText.text, td.captionText.text, tp.captionText.text, "2019-02-14");
+                GUser.UpdateStudent((Student) currentUser, firstname.text, lastname.text, email.text, password.text, ((Student) currentUser).Promo);
+                GApp.SetPrefUser(firstname.text, lastname.text, email.text, password.text, "Elève", promo.captionText.text, td.captionText.text, tp.captionText.text, "2019-02-11");
             }
 
             GApp.ChangeScene(nextScene);

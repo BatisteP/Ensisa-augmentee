@@ -7,7 +7,6 @@ public class LoadRooms : MonoBehaviour
 {
     public Dropdown rooms;
 
-
     void Start() {
         rooms.AddOptions(GRoom.RoomsName());
     }

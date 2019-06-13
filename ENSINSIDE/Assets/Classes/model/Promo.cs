@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Promo : MonoBehaviour
+public class Promo
 {
     private int id;
 	private int year;

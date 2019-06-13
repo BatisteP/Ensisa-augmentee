@@ -3,23 +3,24 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-public class Lesson
-{
+public class Lesson {
+
     private int id;
     private Room room;
     private DateTime start;
     private int duration;
-    private Teacher teacher;
+    private User teacher;
 	private Promo promo;
 	private string description;
 	
-	public Lesson(int id, Room room, DateTime start, int duration, Teacher teacher, Promo promo) {
+	public Lesson(int id, Room room, DateTime start, int duration, User teacher, Promo promo, string description) {
         this.id = id;
         this.room = room;
         this.start = start;
         this.duration = duration;
         this.teacher = teacher;
         this.promo = promo;
+        this.description = description;
 	}
 
 
@@ -59,7 +60,7 @@ public class Lesson
         }
     }
 
-    public Teacher Teacher {
+    public User Teacher {
         get {
             return this.teacher;
         }

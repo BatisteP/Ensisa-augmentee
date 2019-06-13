@@ -15,13 +15,11 @@ public class StatusChange : MonoBehaviour {
             promo.gameObject.SetActive(false);
             td.gameObject.SetActive(false);
             tp.gameObject.SetActive(false);
-            Debug.Log("prof");
         }
         else {
             promo.gameObject.SetActive(true);
             td.gameObject.SetActive(true);
             tp.gameObject.SetActive(true);
-            Debug.Log("eleve");
         }
     }
 }

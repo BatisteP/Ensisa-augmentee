@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Student : User
 {
-	private Promo promo;
+
+    private Promo promo;
 	
 	public Student(int id, string firstname, string lastname, string email, string password, Promo promo) : base(id, firstname, lastname, email, password) {
 		this.promo = promo;

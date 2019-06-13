@@ -1,15 +1,20 @@
-﻿using System;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Mono.Data.Sqlite;
+using System.Data;
+using System.IO;
+using UnityEditor;
+using System;
 
-public class GUser : MonoBehaviour
+public class GUser
 {
-    void Awake() {
-        DontDestroyOnLoad(this);
-    }
+    public static List<User> users = new List<User>();
 
-    private static List<User> users = new List<User>();
-    private static int lastId = -1;
+    public static Student student = null;
+    public static Teacher teacher = null;
+    public static User user = null;
+    public static List<string> usersName = new List<string>();
 
 
     public static List<User> Users() {
@@ -18,8 +23,6 @@ public class GUser : MonoBehaviour
 
 
     public static List<string> UsersName() {
-        List<string> usersName = new List<string>();
-
         foreach (User user in users) {
             usersName.Add(user.ToString());
         }
@@ -27,30 +30,52 @@ public class GUser : MonoBehaviour
         return usersName;
     }
 
+    public static void RetrieveUsers() {
+        IDataReader reader = DBCommands.RetrieveUsers();
+
+        while (reader.Read()) {
+            int id = Int32.Parse(reader[0].ToString());
+            string firstname = reader[1].ToString();
+            string lastname = reader[2].ToString();
+            string email = reader[3].ToString();
+            string password = reader[4].ToString();
+
+            IDataReader userReader = DBCommands.RetrieveStudentPromo(email, password);
+            if (userReader != null) {
+                userReader.Read();
+                int idPromo = Int32.Parse(userReader[0].ToString());
+
+                CreateStudent(id, firstname, lastname, email, password, GPromo.GetPromo(idPromo));
+            }
+            else {
+                CreateTeacher(id, firstname, lastname, email, password);
+            }
+        }
+    }
+
 
     // TODO: Busra CreateStudent BDD + recupérer id
-    public static Student CreateStudent (string firstname, string lastname, string email, string password, Promo promo) {
-        Student student = new Student(lastId, firstname, lastname, email, password, promo);
+    public static Student CreateStudent (int id, string firstname, string lastname, string email, string password, Promo promo) {
+        student = new Student(id, firstname, lastname, email, password, promo);
         users.Add(student);
-        Debug.Log("count: " + users.Count);
+
         return student;
     }
 
     // TODO: Busra CreateTeacher BDD + recupérer id
-    public static Teacher CreateTeacher (string firstname, string lastname, string email, string password) {
-        Teacher teacher = new Teacher(lastId, firstname, lastname, email, password);
+    public static Teacher CreateTeacher (int id, string firstname, string lastname, string email, string password) {
+        teacher = new Teacher(id, firstname, lastname, email, password);
         users.Add(teacher);
 
         return teacher;
     }
 
 
-    public static User GetUserByName (string firstname, string lastname) {
-        User user = null;
+    public static User GetUserByName (string firstname, string lastname) {       
 
         foreach(User u in users) {
             if(String.Equals(u.Firstname, firstname) && String.Equals(u.Lastname, lastname)) {
-                user =  u;
+                user = u;
             }
         }
 
@@ -58,10 +83,8 @@ public class GUser : MonoBehaviour
     }
 
     public static User GetUser (int id) {
-        User user = null;
-
         foreach (User u in users) {
-            if (user.Id == id) {
+            if (u.Id == id) {
                 user = u;
             }
         }
@@ -70,16 +93,11 @@ public class GUser : MonoBehaviour
     }
 
     public static User GetUserByConnexion (string email, string password) {
-        User user = null;
-
         foreach (User u in users) {
             if (String.Equals(u.Email, email) && String.Equals(u.Password, password)) {
                 user = u;
             }
         }
-
-        Debug.Log(users.Count);
-        if (users.Count > 0) Debug.Log(users[0]);
 
         return user;
     }

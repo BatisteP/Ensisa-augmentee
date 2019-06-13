@@ -4,9 +4,10 @@ using UnityEngine;
 using System;
 
 
-public class Room : MonoBehaviour
+public class Room
 {
-	private int roomId;
+
+    private int roomId;
     private int floor;
 	private string appelation;
 	private string type;
