@@ -40,15 +40,15 @@ Les informations de la salle comprennent son type (exemple : salle de TP), son n
 
 
 
-L'emploi du temps de chaque salle du bâtiment Lumière de l'ENSISA est récupérer d'une basse de données en ligne (c.f. Iariss). Les informations ainsi récupérées, nous remplissons notre base de données locale. A chaque fois que l'utilisateur souhaite accéder à une information, le programme cherche la donnée correspondante dans la base de données locale.
+L'emploi du temps de chaque salle du bâtiment Lumière de l'ENSISA est récupéré d'une base de données en ligne (c.f. Iariss). Les informations ainsi récupérées, nous remplissons notre base de données locale. A chaque fois que l'utilisateur souhaite accéder à une information, le programme cherche la donnée correspondante dans la base de données locale.
 
 ## Possibilités d'améliorations
 
-Le temps alloué à la réalisation du projet ayant été relativement court aux vues de nos connaissances sur le sujet, il n'a donc pas été possible d'implémenter toutes les idées qui ont muri dans nos têtes lors du brainstorming de départ. Il reste donc la possibilité d'améliorier ce projet à l'aide de nos idées encore non réalisées à l'heure du jour.
+Le temps alloué à la réalisation du projet ayant été relativement court aux vues de nos connaissances sur le sujet, il n'a donc pas été possible d'implémenter toutes les idées qui ont muri dans nos têtes lors du brainstorming de départ. Il reste donc la possibilité d'améliorer ce projet à l'aide de nos idées encore non réalisées à l'heure du jour.
 
 ## Technologies employées
 
-Pour la réalisation de ce projet nous avons donc choisi d'utiliser Unity et son SDK Vuforia. Pourquoi cette technologie et pas une autre ? Nous étions d'abord parties sur une autre technique de développement qui n'était autre qu'Android Studio et son framework ARcore. Nous avons très vite abandonné cette idée pour une question de compatibilité. En effet ARcore n'est compatible qu'à partir d'une version 7 d'android, ce qui représente environ 10% des utilisateurs android : public beaucoup trop maigre à notre goût. L'utilisation de Unity et Vuforia nous permet alors d'être compatible avec android de la version 5 à la version actuelle, ce qui couvre 97% des utilisateurs android. Certe la technologie est alors moins développer que l'est actuellement le framework ARcore mais la question de compatibilité nous a paru plus importante à notre goût que celle de la performance.
+Pour la réalisation de ce projet nous avons donc choisi d'utiliser Unity et son SDK Vuforia. Pourquoi cette technologie et pas une autre ? Nous étions d'abord parties sur une autre technique de développement qui n'était autre qu'Android Studio et son framework ARcore. Nous avons très vite abandonné cette idée pour une question de compatibilité. En effet ARcore n'est compatible qu'à partir d'une version 7 d'android, ce qui représente environ 10% des utilisateurs android : public beaucoup trop maigre à notre goût. L'utilisation de Unity et Vuforia nous permet alors d'être compatible avec android de la version 5 à la version actuelle, ce qui couvre 97% des utilisateurs android. Certes la technologie est alors moins développer que l'est actuellement le framework ARcore mais la question de compatibilité nous a paru plus importante à notre goût que celle de la performance.
 
 ## Développeurs
 
