@@ -9,21 +9,21 @@ Petit visiteur que vous êtes, vous vous demandez sûrement si vous pouvez entre
 Après un brainstorming entre les différents membres du groupe, il en a découlé un bon nombre d'idées qu'il a fallu par la suite canaliser afin de rentrer dans les délais du projet.
 
 ### Axes principaux
-Les axes principaux de réflexions sont les suivant :
-  - Détection de chaque panonceau de salle
-  - L'affichage de l'emploi du temps
-  - L'affichage de la disponibilité
-  - L'affichage des équipements et des pannes
-  - Gestion de différents profils 
+Les axes principaux de réflexion sont les suivants :
+  - Détection de chaque panonceau de salle ;
+  - L'affichage de l'emploi du temps ;
+  - L'affichage de la disponibilité ;
+  - L'affichage des équipements et des pannes ;
+  - Gestion de différents profils.
 
 ### Axes secondaires
 Les axes moins prioritaires auxquels nous avons pensé :
-  - Check in/check out des professeurs dans leur bureau
-  - Recherche de salle
-  - Jeu de prise en main de l'application
-  - Emploi du temps des événements
-  - Réalité augmentée sur les projets de l'école pour en afficher une explication
-  - Différents petits jeux interactifs au sein de l'application
+  - Check in/check out des professeurs dans leur bureau ;
+  - Recherche de salle ;
+  - Jeu de prise en main de l'application ;
+  - Emploi du temps des événements ;
+  - Réalité augmentée sur les projets de l'école pour en afficher une explication ;
+  - Différents petits jeux interactifs au sein de l'application.
 
 ## Fonctionnalités du prototype
 
