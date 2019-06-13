@@ -2137,10 +2137,10 @@ GameObject:
   - component: {fileID: 707276824}
   - component: {fileID: 707276823}
   - component: {fileID: 707276822}
-  - component: {fileID: 707276825}
-  - component: {fileID: 707276826}
   - component: {fileID: 707276827}
   - component: {fileID: 707276828}
+  - component: {fileID: 707276825}
+  - component: {fileID: 707276826}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2223,7 +2223,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 707276821}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 216f68ef90258c6479cdd347fe21276f, type: 3}
+  m_Script: {fileID: 11500000, guid: 25d48888c848ec54e9bd65632377b043, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &707276826
@@ -2235,9 +2235,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 707276821}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0713cd01a28da324eae423df751fd5a8, type: 3}
+  m_Script: {fileID: 11500000, guid: 407b6019dded8134da8744ffbcc88a16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  promo: {fileID: 15507113}
 --- !u!114 &707276827
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2274,7 +2275,7 @@ MonoBehaviour:
   promo: {fileID: 15507113}
   td: {fileID: 1258023090}
   tp: {fileID: 1825073060}
-  nextScene: MenuScene
+  nextScene: DetectSalle
 --- !u!1 &727895826
 GameObject:
   m_ObjectHideFlags: 0
@@ -3045,7 +3046,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 707276828}
-        m_MethodName: saveInfo
+        m_MethodName: CreateUser
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4701,7 +4702,7 @@ MonoBehaviour:
     m_Options:
     - m_Text: "El\xE8ve"
       m_Image: {fileID: 0}
-    - m_Text: Professeur
+    - m_Text: Prof.
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
@@ -5866,8 +5867,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 707276826}
-        m_MethodName: changeScene
+      - m_Target: {fileID: 707276825}
+        m_MethodName: LoadScene
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

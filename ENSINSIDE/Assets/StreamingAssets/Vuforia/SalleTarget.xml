@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
+  <Tracking>
+    <ImageTarget name="PC4bis" size="0.500000 0.423301" />
+    <ImageTarget name="PC4" size="0.200000 0.169320" />
+    <ImageTarget name="Weisser" size="0.200000 0.198942" />
+    <ImageTarget name="Weber" size="0.200000 0.201070" />
+    <ImageTarget name="Thiry" size="0.200000 0.199467" />
+    <ImageTarget name="TableauSectorielTS8" size="0.200000 0.198421" />
+    <ImageTarget name="TableauSectoriel" size="0.200000 0.200000" />
+    <ImageTarget name="Studer" size="0.200000 0.200541" />
+    <ImageTarget name="SecretariatMIAGE" size="0.200000 0.198404" />
+    <ImageTarget name="SalleReunion" size="0.200000 0.198209" />
+    <ImageTarget name="ProfInvite" size="0.200000 0.198930" />
+    <ImageTarget name="Pinot" size="0.200000 0.198933" />
+    <ImageTarget name="Perronne" size="0.200000 0.199467" />
+    <ImageTarget name="PCReseaux" size="0.200000 0.200551" />
+    <ImageTarget name="Orjuela" size="0.200000 0.199465" />
+    <ImageTarget name="Muller" size="0.200000 0.198930" />
+    <ImageTarget name="LSI" size="0.200000 0.197260" />
+    <ImageTarget name="Ledy" size="0.200000 0.199468" />
+    <ImageTarget name="Laurain" size="0.200000 0.198400" />
+    <ImageTarget name="Lauffenburger" size="0.200000 0.199472" />
+    <ImageTarget name="LaboLSI" size="0.120000 0.120000" />
+    <ImageTarget name="IARISS" size="0.200000 0.198895" />
+    <ImageTarget name="Hassenforder" size="0.200000 0.199465" />
+    <ImageTarget name="Forestier" size="0.200000 0.198928" />
+    <ImageTarget name="Fondement" size="0.200000 0.200000" />
+    <ImageTarget name="E38" size="0.200000 0.200000" />
+    <ImageTarget name="E37bis" size="0.200000 0.199451" />
+    <ImageTarget name="E37" size="0.200000 0.200000" />
+    <ImageTarget name="E36" size="0.200000 0.198904" />
+    <ImageTarget name="E35" size="0.200000 0.199451" />
+    <ImageTarget name="E34" size="0.200000 0.198907" />
+    <ImageTarget name="E33" size="0.200000 0.202210" />
+    <ImageTarget name="E32" size="0.200000 0.198904" />
+    <ImageTarget name="E31" size="0.200000 0.198907" />
+    <ImageTarget name="E30" size="0.200000 0.200546" />
+    <ImageTarget name="Dupuis" size="0.200000 0.198400" />
+    <ImageTarget name="ChercheurMIAM3" size="0.200000 0.198953" />
+    <ImageTarget name="ChercheurMIAM2" size="0.200000 0.198417" />
+    <ImageTarget name="ChercheurMIAM1" size="0.200000 0.199472" />
+    <ImageTarget name="ChercheurLSI" size="0.200000 0.199467" />
+    <ImageTarget name="Cafe" size="0.200000 0.199451" />
+    <ImageTarget name="BiroucheMourllion" size="0.200000 0.201042" />
+    <ImageTarget name="Binder" size="0.200000 0.200000" />
+    <ImageTarget name="BenSouissi" size="0.200000 0.197861" />
+    <ImageTarget name="Basset" size="0.200000 0.199462" />
+    <ImageTarget name="Aubry" size="0.200000 0.199461" />
+    <ImageTarget name="Ambs" size="0.200000 0.200551" />
+  </Tracking>
+</QCARConfig>

@@ -1169,14 +1169,14 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1859094993}
-        m_MethodName: changeScene
+        m_MethodName: LoadScene
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: MenuScene
+          m_StringArgument: DetectSalle
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
@@ -1654,6 +1654,7 @@ GameObject:
   - component: {fileID: 1859094991}
   - component: {fileID: 1859094990}
   - component: {fileID: 1859094993}
+  - component: {fileID: 1859094994}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1736,9 +1737,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 1859094989}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0713cd01a28da324eae423df751fd5a8, type: 3}
+  m_Script: {fileID: 11500000, guid: 25d48888c848ec54e9bd65632377b043, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1859094994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1859094989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8825b89fc81b2b2468ad26cbe410134a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  users: {fileID: 348914427}
 --- !u!1 &1897882026
 GameObject:
   m_ObjectHideFlags: 0
